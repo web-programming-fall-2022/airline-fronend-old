@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/auth/style.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/fontawesome-6.2.1/css/fontawesome.css">
+    <link href="/assets/fontawesome-6.2.1/css/brands.css" rel="stylesheet">
+    <link href="/assets/fontawesome-6.2.1/css/solid.css" rel="stylesheet">
+    <title>Auth | Sharif Airways</title>
+</head>
+<body>
+<div class="container {% if type == 'register' %}right-panel-active{% endif %}" id="container">
+    <div class="form-container sign-up-container">
+        <form method="post" id="form-id">
+            <input type="hidden" name="action" value="register"/>
+            <h1>ثبت نام</h1>
+            <div class="flex-overwriter">
+                <input type="text" id="register_first_name" name="first_name" placeholder="نام" required/>
+                <input type="text" id="register_last_name" name="last_name" placeholder="نام خانوادگی" required/>
+            </div>
+            <input type="text" id="register_passport" name="passport" placeholder="شماره پاسپورت" required/>
+            <input type="email" id="register_email" name="email" placeholder="ایمیل" required/>
+            <input type="password" id="register_password" name="password" placeholder="کلمه عبور" required/>
+            <button type="submit" name="register" onclick="myFunction()">ثبت نام</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form method="post">
+            <input type="hidden" name="action" value="login"/>
+            <h1>ورود</h1>
+            <div class="flex-overwriter">
+                <input type="email" id="login_email" name="email" placeholder="ایمیل" required/>
+                <label>ایمیل</label>
+            </div>
+            <div class="flex-overwriter">
+                <input type="email" id="login_password" name="password" placeholder="کلمه عبور" required/>
+                <label>کلمه عبور</label>
+            </div>
+            <button type="submit" name="login">ورود</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1 class="shadow-overlay">می‌خواهید وارد شوید؟</h1>
+                <p>برای ورود به اکانت خود روی دکمه‌ی زیر کلیک کنید.</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>اکانت ندارید؟</h1>
+                <p>
+                    لطفا روی دکمه‌ی زیر کلیک کنید تا بتوانید عضوی از خانواده‌ی ما شوید.
+                </p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/auth/script.js"></script>
+</body>
+</html>
