@@ -31,12 +31,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.inputs__container {
+  width: 100%;
+  display: flex;
+}
+
 .cities__container {
   width: 400px;
   height: 3rem;
   display: flex;
   border-radius: 0.5rem;
   border: 1px solid #dddddd;
+  margin-left: 0.5rem;
 }
 
 .src-city__container {
@@ -45,7 +51,10 @@ body {
   height: 100%;
 }
 
-.src-city__container>input {
+.src-city__container>input,
+.dest-city__container>input,
+.depart-date__container>input,
+.return-date__container>input {
   height: 100%;
   border: 0;
   padding: 0.5rem;
@@ -57,9 +66,33 @@ body {
   height: 100%;
 }
 
-.dest-city__container>input {
-  height: 100%;
-  border: 0;
+.depart-date__container,
+.return-date__container,
+.passengers-number__container {
+  width: 180px;
+  height: 3rem;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  margin-left: 0.5rem;
+}
+
+.passengers-number__container {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.passengers-number__container>span {
+  font-size: 0.75rem;
+  color: #4d4d4d;
+  padding: 0.5rem;
+}
+
+.passengers-number__input {
+  width: 30%;
+  height: 70%;
+  border: 0.5px solid #dddddd;
+  border-radius: 8px;
   padding: 0.5rem;
   outline: none !important;
 }
