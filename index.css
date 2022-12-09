@@ -13,3 +13,53 @@ body {
   font-family: 'Noto Sans Arabic', sans-serif;
   margin: 0;
 }
+
+.book-card__container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  border-radius: 0.5rem;
+  border: 2px solid #dddddd;
+  padding: 1rem 2rem;
+}
+
+.book-card__container>span {
+  color: #4d4d4d;
+  margin-bottom: 2rem;
+}
+
+.cities__container {
+  width: 400px;
+  height: 3rem;
+  display: flex;
+  border-radius: 0.5rem;
+  border: 1px solid #dddddd;
+}
+
+.src-city__container {
+  flex-grow: 0.5;
+  border-left: 1px solid #dddddd;
+  height: 100%;
+}
+
+.src-city__container>input {
+  height: 100%;
+  border: 0;
+  padding: 0.5rem;
+  outline: none !important;
+}
+
+.dest-city__container {
+  flex-grow: 0.5;
+  height: 100%;
+}
+
+.dest-city__container>input {
+  height: 100%;
+  border: 0;
+  padding: 0.5rem;
+  outline: none !important;
+}

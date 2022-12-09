@@ -1,20 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.rtl.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/fontawesome-6.2.1/css/fontawesome.css">
-    <link href="/assets/fontawesome-6.2.1/css/brands.css" rel="stylesheet">
-    <link href="/assets/fontawesome-6.2.1/css/solid.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.rtl.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/fontawesome-6.2.1/css/fontawesome.css" />
+    <link href="/assets/fontawesome-6.2.1/css/brands.css" rel="stylesheet" />
+    <link href="/assets/fontawesome-6.2.1/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
     <title>Home | Sharif Airways</title>
 </head>
+
 <body>
-<div id="navbar"></div>
-<script src="/js/bootstrap.bundle.js"></script>
-<script src="/js/jquery-3.6.1.js"></script>
-<script src="/index.js"></script>
+    <div id="navbar"></div>
+    <div class="book-card__container">
+        <span>پرواز خود را انتخاب کنید:</span>
+        <div class="cities__container">
+            <div class="src-city__container">
+                <input id="src-city" class="src-city__input" placeholder="مبدأ" onfocus="removePlaceHolder(this, event)"
+                    onblur="removePlaceHolder(this, event)" />
+            </div>
+            <div class="dest-city__container">
+                <input id="dest-city" class="dest-city__input" placeholder="مقصد"
+                    onfocus="removePlaceHolder(this, event)" onblur="removePlaceHolder(this, event)" />
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/jquery-3.6.1.js"></script>
+    <script src="/index.js"></script>
 </body>
+
 </html>
