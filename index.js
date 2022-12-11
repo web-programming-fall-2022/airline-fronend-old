@@ -80,16 +80,76 @@ function onDestCityFocusHandler(input, event) {
   }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   $(".depart-datePicker").persianDatepicker({
     autoClose: true,
     initialValue: false,
-    format: 'YYYY/MM/DD',
+    format: "YYYY/MM/DD",
   });
 
   $(".return-datePicker").persianDatepicker({
     autoClose: true,
     initialValue: false,
-    format: 'YYYY/MM/DD',
+    format: "YYYY/MM/DD",
+  });
+});
+
+var srcCityInput = document.querySelector("#src-city");
+srcCityInput.addEventListener("input", function () {
+  const itemsContainer = $(".src-airports");
+  const containerNode = document.querySelector(".src-airports");
+  while (containerNode.firstChild) {
+    containerNode.removeChild(containerNode.firstChild);
+  }
+  $.getJSON("/data/airports.json", function (data) {
+    if (srcCityInput.value !== "") {
+      var newItems = data.filter((item) =>
+        item.name.includes(srcCityInput.value)
+      );
+    } else {
+      newItems = data;
+    }
+    for (var keys in newItems) {
+      itemsContainer.append(
+        `<li class="airport-item">${newItems[keys].name}</li>`
+      );
+    }
+    document
+      .querySelector(".src-airports")
+      .addEventListener("click", function (e) {
+        if (e.target && e.target.matches("li.airport-item")) {
+          srcCityInput.value = e.target.innerText;
+        }
+      });
+  });
+});
+
+var destCityInput = document.querySelector("#dest-city");
+destCityInput.addEventListener("input", function () {
+  const itemsContainer = $(".dest-airports");
+  const containerNode = document.querySelector(".dest-airports");
+  while (containerNode.firstChild) {
+    containerNode.removeChild(containerNode.firstChild);
+  }
+  $.getJSON("/data/airports.json", function (data) {
+    if (destCityInput.value !== "") {
+      var newItems = data.filter((item) =>
+        item.name.includes(destCityInput.value)
+      );
+    } else {
+      newItems = data;
+    }
+    for (var keys in newItems) {
+      itemsContainer.append(
+        `<li class="airport-item">${newItems[keys].name}</li>`
+      );
+    }
+    document
+      .querySelector(".dest-airports")
+      .addEventListener("click", function (e) {
+        if (e.target && e.target.matches("li.airport-item")) {
+          destCityInput.value = e.target.innerText;
+        }
+      });
   });
 });
