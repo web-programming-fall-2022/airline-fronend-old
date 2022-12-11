@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
 
 :root,
 [theme-mode="light"] {
@@ -17,6 +17,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Noto Sans Arabic', sans-serif;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Noto Sans Arabic', sans-serif;
     height: 100vh;
     margin: -20px 0 50px;
 }
