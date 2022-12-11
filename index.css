@@ -103,6 +103,7 @@
 }
 
 .src-airports__container {
+  z-index: 2;
   background-color: #ffffff;
   position: relative;
   top: 8px;
