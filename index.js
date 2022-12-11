@@ -30,6 +30,7 @@ $.getJSON("/data/airports.json", function (data) {
         selectedAirportName = e.target.innerText;
         srcCity.setAttribute("value", selectedAirportName);
       }
+      document.getElementById("src-airports-container").style.visibility = "hidden";
     });
 });
 
@@ -46,6 +47,7 @@ $.getJSON("/data/airports.json", function (data) {
         selectedAirportName = e.target.innerText;
         destCity.setAttribute("value", selectedAirportName);
       }
+      document.getElementById("dest-airports-container").style.visibility = "hidden";
     });
 });
 
@@ -55,13 +57,12 @@ function onSrcCityFocusHandler(input, event) {
   if (event.type == "focus") {
     input.setAttribute("rel", input.getAttribute("placeholder"));
     input.removeAttribute("placeholder");
-    srcAirports.style.opacity = "1";
+    srcAirports.style.visibility = "visible";
   }
 
   if (event.type == "blur") {
     input.setAttribute("placeholder", input.getAttribute("rel"));
     input.removeAttribute("rel");
-    srcAirports.style.opacity = "0";
   }
 }
 
@@ -71,13 +72,12 @@ function onDestCityFocusHandler(input, event) {
   if (event.type == "focus") {
     input.setAttribute("rel", input.getAttribute("placeholder"));
     input.removeAttribute("placeholder");
-    destAirports.style.opacity = "1";
+    destAirports.style.visibility = "visible";
   }
 
   if (event.type == "blur") {
     input.setAttribute("placeholder", input.getAttribute("rel"));
     input.removeAttribute("rel");
-    destAirports.style.opacity = "0";
   }
 }
 
