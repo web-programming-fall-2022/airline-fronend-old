@@ -123,10 +123,10 @@ body {
   border: 0.5px solid #dddddd;
   border-radius: 8px;
   padding: 0.5rem;
-  display: none;
+  opacity: 0;
 }
 
-.src-airports {
+.src-airports, .dest-airports {
   padding: 0;
   direction: rtl;
   list-style: none;
@@ -134,16 +134,16 @@ body {
   margin: 0;
 }
 
-.src-airports>li {
+.src-airports>li, .dest-airports>li {
   padding: 0.5rem 0;
   border-bottom: 0.5px solid #dddddd;
 }
 
-.src-airports>li:last-child {
+.src-airports>li:last-child, .dest-airports>li:last-child {
   border-bottom: none;
 }
 
-.src-airports>li:hover {
+.src-airports>li:hover, .dest-airports>li:hover {
   cursor: pointer;
   background-color: #dddddd;
 }

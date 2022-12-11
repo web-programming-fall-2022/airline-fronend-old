@@ -1,5 +1,9 @@
 $("#navbar").load("/components/navbar.html");
 
+var selectedAirportName = "";
+var srcCity = document.getElementById("src-city");
+var destCity = document.getElementById("dest-city");
+
 function removePlaceHolder(input, event) {
   if (event.type == "focus") {
     input.setAttribute("rel", input.getAttribute("placeholder"));
@@ -13,41 +17,67 @@ function removePlaceHolder(input, event) {
 }
 
 $.getJSON("/data/airports.json", function (data) {
-    const containerDiv = $('.src-airports');
-    for (var keys in data) {
-      containerDiv.append(`<li>${data[keys].name}</li>`)
-    }
-})
+  const containerDiv = $(".src-airports");
+  for (var keys in data) {
+    containerDiv.append(`<li class="airport-item">${data[keys].name}</li>`);
+  }
 
-function onSrcCityFocusHandler (input, event) {
+  document
+    .querySelector(".src-airports")
+    .addEventListener("click", function (e) {
+      if (e.target && e.target.matches("li.airport-item")) {
+        selectedAirportName = e.target.innerText;
+        srcCity.setAttribute("value", selectedAirportName);
+        console.log(srcCity);
+      }
+    });
+});
+
+$.getJSON("/data/airports.json", function (data) {
+  const containerDiv = $(".dest-airports");
+  for (var keys in data) {
+    containerDiv.append(`<li class="airport-item">${data[keys].name}</li>`);
+  }
+
+  document
+    .querySelector(".dest-airports")
+    .addEventListener("click", function (e) {
+      if (e.target && e.target.matches("li.airport-item")) {
+        selectedAirportName = e.target.innerText;
+        destCity.setAttribute("value", selectedAirportName);
+        console.log(destCity);
+      }
+    });
+});
+
+function onSrcCityFocusHandler(input, event) {
   var srcAirports = document.getElementById("src-airports-container");
 
   if (event.type == "focus") {
     input.setAttribute("rel", input.getAttribute("placeholder"));
     input.removeAttribute("placeholder");
-    srcAirports.style.display = "block";
+    srcAirports.style.opacity = "1";
   }
 
   if (event.type == "blur") {
     input.setAttribute("placeholder", input.getAttribute("rel"));
     input.removeAttribute("rel");
-    srcAirports.style.display = "none";
+    srcAirports.style.opacity = "0";
   }
 }
 
-function onDestCityFocusHandler (input, event) {
+function onDestCityFocusHandler(input, event) {
   var destAirports = document.getElementById("dest-airports-container");
 
   if (event.type == "focus") {
     input.setAttribute("rel", input.getAttribute("placeholder"));
     input.removeAttribute("placeholder");
-    destAirports.style.display = "block";
+    destAirports.style.opacity = "1";
   }
 
   if (event.type == "blur") {
     input.setAttribute("placeholder", input.getAttribute("rel"));
     input.removeAttribute("rel");
-    destAirports.style.display = "none";
+    destAirports.style.opacity = "0";
   }
-
 }
