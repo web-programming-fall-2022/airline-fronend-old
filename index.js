@@ -1,4 +1,5 @@
 $("#navbar").load("/components/navbar.html");
+$("#footer").load("/components/footer.html");
 
 var selectedAirportName = "";
 var srcCity = document.getElementById("src-city");
