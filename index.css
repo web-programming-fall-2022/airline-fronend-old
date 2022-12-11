@@ -17,6 +17,7 @@
   border-radius: 0.5rem;
   border: 2px solid #dddddd;
   padding: 1rem 2rem;
+  overflow: hidden;
 }
 
 .book-card__container>span {
