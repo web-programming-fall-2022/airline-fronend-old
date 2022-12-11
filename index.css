@@ -15,6 +15,15 @@ body {
   margin: 0;
 }
 
+.homepage-image__container {
+  width: 100%;
+}
+
+.homepage-image {
+  width: 100%;
+  height: auto;
+}
+
 .book-card__container {
   width: 80%;
   margin: 50px auto;
