@@ -28,7 +28,6 @@ $.getJSON("/data/airports.json", function (data) {
       if (e.target && e.target.matches("li.airport-item")) {
         selectedAirportName = e.target.innerText;
         srcCity.setAttribute("value", selectedAirportName);
-        console.log(srcCity);
       }
     });
 });
@@ -45,7 +44,6 @@ $.getJSON("/data/airports.json", function (data) {
       if (e.target && e.target.matches("li.airport-item")) {
         selectedAirportName = e.target.innerText;
         destCity.setAttribute("value", selectedAirportName);
-        console.log(destCity);
       }
     });
 });
