@@ -81,5 +81,15 @@ function onDestCityFocusHandler(input, event) {
 }
 
 $(document).ready(function() {
-  $(".example1").persianDatepicker({});
+  $(".depart-datePicker").persianDatepicker({
+    autoClose: true,
+    initialValue: false,
+    format: 'YYYY/MM/DD',
+  });
+
+  $(".return-datePicker").persianDatepicker({
+    autoClose: true,
+    initialValue: false,
+    format: 'YYYY/MM/DD',
+  });
 });
