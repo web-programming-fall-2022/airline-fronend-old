@@ -79,3 +79,7 @@ function onDestCityFocusHandler(input, event) {
     destAirports.style.opacity = "0";
   }
 }
+
+$(document).ready(function() {
+  $(".example1").persianDatePicker();
+});
