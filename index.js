@@ -81,5 +81,5 @@ function onDestCityFocusHandler(input, event) {
 }
 
 $(document).ready(function() {
-  $(".example1").persianDatePicker();
+  $(".example1").persianDatepicker({});
 });
