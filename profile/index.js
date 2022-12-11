@@ -1,4 +1,5 @@
-// $("#navbar").load("/components/navbar.html");
+$("#navbar").load("/components/navbar.html");
+$("#footer").load("/components/footer.html");
 
 $.get('/components/thicket.html', function (thicketHtml) {
     $.getJSON("/data/thickets.json", function (data) {
