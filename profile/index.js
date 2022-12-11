@@ -8,19 +8,17 @@ $.get('/components/thicket.html', function (thicketHtml) {
             const thicket = data[i];
             html.append(`<div class="thicket-${i}">${thicketHtml}</div>`)
 
-            $(`.thicket-${i} #from-airport`).text(thicket['from']['airport']['name'])
-            $(`.thicket-${i} #to-airport`).text(thicket['to']['airport']['name'])
-            $(`.thicket-${i} #from-airport-code`).text(thicket['from']['airport']['code'])
-            $(`.thicket-${i} #to-airport-code`).text(thicket['to']['airport']['code'])
+            $(`.thicket-${i} #from-airport`).text(`از ${thicket['from']['airport']['name']} (${thicket['from']['airport']['code']})`)
+            $(`.thicket-${i} #to-airport`).text(`به ${thicket['to']['airport']['name']} (${thicket['to']['airport']['code']})`)
             $(`.thicket-${i} #from-city`).text(thicket['from']['airport']['city'])
             $(`.thicket-${i} #to-city`).text(thicket['to']['airport']['city'])
 
-            $(`.thicket-${i} #type`).text(thicket['type'])
-            $(`.thicket-${i} #duration`).text(thicket['duration'])
-            $(`.thicket-${i} #price`).text(thicket['price'])
+            $(`.thicket-${i} #type`).text(`پرواز ${thicket['type']}`)
+            $(`.thicket-${i} #duration`).text(`به مدت ${thicket['duration']} دقیقه`)
+            $(`.thicket-${i} #price`).text(`${thicket['price']} تومان`)
 
-            const standardFromDate = Date(thicket['from']['date'])
-            const standardToDate = Date(thicket['to']['date'])
+            const standardFromDate = Date.parse(thicket['from']['date'])
+            const standardToDate = Date.parse(thicket['to']['date'])
 
             const persianFromDate = new persianDate(standardFromDate)
             const persianToDate = new persianDate(standardToDate)

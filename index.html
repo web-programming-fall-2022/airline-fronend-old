@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/assets/fontawesome-6.2.1/css/all.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="/css/persian-datepicker.css"/>
-    <title>Home | Sharif Airways</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <title>خانه | هواپیمایی شریف</title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     </div>
     <div class="book-card__container">
         <span>پرواز خود را انتخاب کنید:</span>
-        <div class="inputs__container">
+        <div class="inputs__container container">
             <div class="cities__container">
                 <div class="src-city__container">
                     <input id="src-city" class="src-city__input" placeholder="مبدأ"
@@ -50,9 +51,11 @@
             </div>
         </div>
         <div class="control__container">
-            <button type="button" class="btn btn-primary btn-lg">جستجو</button>
+            <button id="search" type="button" class="btn btn-primary btn-lg">جستجو</button>
         </div>
     </div>
+
+    <div id="search-result"></div>
 
     <div id="footer"></div>
 
