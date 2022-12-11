@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  direction: rtl;
   font-family: 'Noto Sans Arabic', sans-serif;
   margin: 0;
 }
@@ -38,7 +39,7 @@ body {
 }
 
 .cities__container {
-  width: 400px;
+  width: 600px;
   height: 3rem;
   display: flex;
   border-radius: 0.5rem;
@@ -48,6 +49,8 @@ body {
 
 .src-city__container {
   flex-grow: 0.5;
+  width: 300px;
+  position: relative;
   border-left: 1px solid #dddddd;
   height: 100%;
   padding: 0.5rem;
@@ -58,6 +61,7 @@ body {
 .depart-date__container>input,
 .return-date__container>input {
   height: 100%;
+  width: 100%;
   border: 0;
   outline: none !important;
 }
@@ -66,6 +70,7 @@ body {
   flex-grow: 0.5;
   height: 100%;
   padding: 0.5rem;
+  width: 300px;
 }
 
 .depart-date__container,
@@ -97,10 +102,48 @@ body {
   height: 100%;
   border: 0.5px solid #dddddd;
   border-radius: 8px;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   outline: none !important;
 }
 
 .control__container {
   direction: ltr;
+}
+
+.src-airports__container {
+  background-color: #ffffff;
+  z-index: 2;
+  position: relative;
+  top: 8px;
+  right: -8px;
+  direction: rtl;
+  width: 300px;
+  overflow-y: auto;
+  height: 400px;
+  border: 0.5px solid #dddddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: none;
+}
+
+.src-airports {
+  padding: 0;
+  direction: rtl;
+  list-style: none;
+  width: fit-content;
+  margin: 0;
+}
+
+.src-airports>li {
+  padding: 0.5rem 0;
+  border-bottom: 0.5px solid #dddddd;
+}
+
+.src-airports>li:last-child {
+  border-bottom: none;
+}
+
+.src-airports>li:hover {
+  cursor: pointer;
+  background-color: #dddddd;
 }

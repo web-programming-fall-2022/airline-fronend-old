@@ -19,11 +19,17 @@
             <div class="cities__container">
                 <div class="src-city__container">
                     <input id="src-city" class="src-city__input" placeholder="مبدأ"
-                        onfocus="removePlaceHolder(this, event)" onblur="removePlaceHolder(this, event)" />
+                        onfocus="onSrcCityFocusHandler(this, event)" onblur="onSrcCityFocusHandler(this, event)" />
+                    <div id="src-airports-container" class="src-airports__container">
+                        <ul class="src-airports"></ul>
+                    </div>
                 </div>
                 <div class="dest-city__container">
                     <input id="dest-city" class="dest-city__input" placeholder="مقصد"
-                        onfocus="removePlaceHolder(this, event)" onblur="removePlaceHolder(this, event)" />
+                        onfocus="onDestCityFocusHandler(this, event)" onblur="onDestCityFocusHandler(this, event)" />
+                    <div id="dest-airports-container" class="src-airports__container">
+                        <ul class="src-airports"></ul>
+                    </div>
                 </div>
             </div>
             <div class="depart-date__container">
@@ -42,7 +48,6 @@
         <div class="control__container">
             <button type="button" class="btn btn-primary btn-lg">جستجو</button>
         </div>
-
     </div>
 
     <script src="/js/bootstrap.bundle.js"></script>
