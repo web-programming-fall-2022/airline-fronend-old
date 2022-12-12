@@ -140,3 +140,38 @@
   cursor: pointer;
   background-color: #dddddd;
 }
+
+@media only screen and (max-width: 830px) {
+  .inputs__container {
+    flex-direction: column;
+  }
+
+  .inputs__container > div {
+    margin-bottom: 1rem;
+  }
+
+  .cities__container {
+    width: 100%;
+    flex-direction: column;
+    height: 6rem;
+  }
+
+  .src-city__container, .dest-city__container {
+    width: 100%;
+    border: 0;
+    height: 50%;
+  }
+
+  .src-city__container {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .src-airports__container, .depart-date__container, .return-date__container, .passengers-number__container {
+    width: 100%;
+  }
+
+  .control__container {
+    display: flex;
+    justify-content: center;
+  }
+}
