@@ -29,6 +29,7 @@ body {
     font-family: 'Noto Sans Arabic', sans-serif;
     height: 100vh;
     margin: -20px 0 50px;
+    padding: 0 1rem;
 }
 
 h1 {
@@ -282,4 +283,27 @@ li {
 
 .error-css {
     color: var(--danger);
+}
+
+@media only screen and (max-width: 375px) {
+    form {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .overlay-panel {
+        padding: 0 1rem;
+    }
+
+    #register_first_name {
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+    }
+    
 }
