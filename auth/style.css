@@ -285,7 +285,7 @@ li {
     color: var(--danger);
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 576px) {
     form {
         padding: 0 1rem;
     }
