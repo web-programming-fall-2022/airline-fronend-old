@@ -93,6 +93,7 @@ form {
 }
 
 input {
+    direction: rtl;
     background-color: var(--input-color);
     border: none;
     padding: 12px 15px;
@@ -196,6 +197,7 @@ input {
 }
 
 .flex-overwriter {
+    direction: rtl;
     min-width: 100%;
     display: flex;
     flex-direction: row;
