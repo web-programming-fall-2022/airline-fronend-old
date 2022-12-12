@@ -164,7 +164,7 @@ $("#search").click(function () {
 
       for (let i = 0; i < data.length; i++) {
         const thicket = data[i];
-        html.append(`<div class="thicket-${i}">${thicketHtml}</div>`)
+        html.append(`<div class="thicket-${i} m-5">${thicketHtml}</div>`)
 
         $(`.thicket-${i} #from-airport`).text(`از ${thicket['from']['airport']['name']} (${thicket['from']['airport']['code']})`)
         $(`.thicket-${i} #to-airport`).text(`به ${thicket['to']['airport']['name']} (${thicket['to']['airport']['code']})`)
@@ -188,6 +188,10 @@ $("#search").click(function () {
           console.log("clicked")
           window.location.href = "/cart";
         });
+
+        if (thicket['capacity'] && thicket['capacity'] < 3) {
+          $(`.thicket-${i} #capacity`).html(`<div class="card m-2 p-3">ظرفیت محدود است (${thicket['capacity']} نفر)</div>`)
+        }
       }
     })
   })
