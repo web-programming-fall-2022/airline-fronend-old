@@ -1,0 +1,11 @@
+.dark,
+.dark div,
+.dark input,
+.dark span,
+.dark ::placeholder,
+.dark a,
+.dark footer {
+  background-color: #212121 !important;
+  color: #ffffff;
+  border-color: #ffffff;
+}

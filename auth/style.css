@@ -146,6 +146,7 @@ input {
 }
 
 @keyframes show {
+
     0%,
     49.99% {
         opacity: 0;
@@ -176,11 +177,9 @@ input {
 
 .overlay {
     background: var(--dark-grad);
-    background: -webkit-linear-gradient(
-            to right,
+    background: -webkit-linear-gradient(to right,
             var(--dark-grad),
-            var(--light-grad)
-    );
+            var(--light-grad));
     background: linear-gradient(to right, var(--dark-grad), var(--light-grad));
     background-repeat: no-repeat;
     background-size: cover;
@@ -206,7 +205,7 @@ input {
     margin: 0.4rem 0 0.5rem 0;
 }
 
-.flex-overwriter > input[type="text"] {
+.flex-overwriter>input[type="text"] {
     margin: 0 0.2rem 0 0;
 }
 
@@ -214,23 +213,24 @@ input {
     .flex-overwriter {
         flex-direction: column;
     }
-    .flex-overwriter > input[placeholder="First Name"] {
+
+    .flex-overwriter>input[placeholder="First Name"] {
         margin: 0.4rem 0 0.5rem 0;
     }
 }
 
-.flex-overwriter > input[type="checkbox"] {
+.flex-overwriter>input[type="checkbox"] {
     width: auto;
     margin: 0;
     padding: 0;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-.flex-overwriter > input[type="checkbox"]:checked {
+.flex-overwriter>input[type="checkbox"]:checked {
     background-color: var(--light-grad);
 }
 
-.flex-overwriter > label {
+.flex-overwriter>label {
     font-size: 12px;
 }
 
@@ -305,5 +305,9 @@ li {
     button {
         padding: 1rem 2rem;
     }
-    
+
+}
+
+.dark {
+    background-color: #212121;
 }
