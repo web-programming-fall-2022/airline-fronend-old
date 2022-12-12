@@ -42,6 +42,7 @@ h2 {
 }
 
 p {
+    direction: rtl;
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
