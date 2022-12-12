@@ -178,13 +178,16 @@ $("#search").click(function () {
         const standardFromDate = Date.parse(thicket['from']['date'])
         const standardToDate = Date.parse(thicket['to']['date'])
 
-        console.log(standardFromDate)
-
         const persianFromDate = new persianDate(standardFromDate)
         const persianToDate = new persianDate(standardToDate)
 
         $(`.thicket-${i} #from-date`).text(persianFromDate.format('dddd DD MMMM YYYY ساعت h:mm:ss a'));
         $(`.thicket-${i} #to-date`).text(persianToDate.format('dddd DD MMMM YYYY ساعت h:mm:ss a'));
+
+        $(`.thicket-${i} #price-box`).click(function () {
+          console.log("clicked")
+          window.location.href = "/cart";
+        });
       }
     })
   })
